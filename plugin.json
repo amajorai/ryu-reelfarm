@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.reelfarm",
+  "version": "0.1.14",
+  "description": "A catalog preview of a planned local-first creator workspace for short-form projects, schedules, and performance signals.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-reelfarm",
+  "repository": "https://github.com/amajorai/ryu-reelfarm",
+  "keywords": [
+    "tiktok",
+    "reels",
+    "automation",
+    "slideshow",
+    "content",
+    "analytics"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/reelfarm",
+      "displayName": "Sprout Studio"
+    }
+  }
+}
