@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.studio",
+  "version": "0.2.0",
+  "description": "A local-first content queue for short-form ideas, hooks, visual direction, and planned publish slots.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-reelfarm",
+  "repository": "https://github.com/amajorai/ryu-reelfarm",
+  "keywords": [
+    "tiktok",
+    "reels",
+    "automation",
+    "slideshow",
+    "content",
+    "analytics"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/studio",
+      "displayName": "Studio"
+    }
+  }
+}
