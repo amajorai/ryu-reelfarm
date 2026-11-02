@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "package": "reelfarm",
+  "scope": "complete",
+  "expectedRows": 27,
+  "evidenceBoundary": "The packed Companion runs in a real Playwright browser through ExtensionHost with deterministic local storage and model fixtures. This proves UI state, request payloads, retry/error handling, and persistence across reload. Import currently uses the browser file-input fallback because the host bridge does not expose window.ryu.ui.uploadFile; Playwright validates its accept/multiple constraints and file parsing, while OS picker chrome remains partial. Export proves the JSON Blob and download-link request; native download delivery remains partial because the manifest does not request files:download. It does not prove a live model provider, social-platform delivery, or scheduling; Studio currently has no connected publisher or scheduler.",
+  "selector": {
+    "spec": "e2e/reelfarm-companion.spec.ts",
+    "config": "e2e/reelfarm-companion.playwright.config.ts"
+  },
+  "assertions": [
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "165",
+        "component": "IdeaCard",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Favorite action updates its pressed state",
+      "assertionMarker": "Remove A weekly insight favorite"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "192",
+        "component": "IdeaCard",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Stage change moves the card and persists its status",
+      "assertionMarker": "Move A weekly insight"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "216",
+        "component": "IdeaCard",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Edit action loads saved values and applies changed fields",
+      "assertionMarker": "Edit"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "224",
+        "component": "IdeaCard",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "Delete confirmation can be escaped, canceled, or committed for only one idea",
+      "assertionName": "Card delete opens a confirmation before removing data",
+      "assertionMarker": "Delete"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "255",
+        "component": "ComposerDialog",
+        "tag": "Dialog",
+        "events": "onOpenChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Composer dialog exposes its editing guidance",
+      "assertionMarker": "Keep the promise, the visual, and the next action in one place."
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "270",
+        "component": "ComposerDialog",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Submitting a completed composer creates the idea",
+      "assertionMarker": "Idea added to the farm."
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "279",
+        "component": "ComposerDialog",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Title input retains the edited value",
+      "assertionMarker": "Title"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "290",
+        "component": "ComposerDialog",
+        "tag": "Textarea",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Hook input retains the edited value",
+      "assertionMarker": "Hook"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "302",
+        "component": "ComposerDialog",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Platform selection is stored with the idea",
+      "assertionMarker": "Platform"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "323",
+        "component": "ComposerDialog",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Planned publish slot is editable and persisted",
+      "assertionMarker": "Publish slot"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "334",
+        "component": "ComposerDialog",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Comma-separated tags are normalized and rendered",
+      "assertionMarker": "hooks, workflow"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "344",
+        "component": "ComposerDialog",
+        "tag": "Textarea",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Supporting notes are editable and searchable",
+      "assertionMarker": "Visual direction or supporting context"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "354",
+        "component": "ComposerDialog",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "New idea can be dismissed without saving a draft",
+      "assertionName": "Cancel closes the composer without saving changes",
+      "assertionMarker": "Cancel"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "357",
+        "component": "ComposerDialog",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Add to farm submits the composer form",
+      "assertionMarker": "Add to farm"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "559",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "Import JSON reports invalid data and succeeds after the file is corrected",
+      "assertionName": "Browser file input validates and recovers from invalid JSON (desktop picker partial)",
+      "assertionMarker": "Import JSON"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "566",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Export builds a valid JSON Blob and requests a named download (native delivery partial)",
+      "assertionMarker": "Export JSON"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "573",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "New idea can be dismissed without saving a draft",
+      "assertionName": "Toolbar New idea opens a clean composer",
+      "assertionMarker": "New idea"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "643",
+        "component": "App",
+        "tag": "Textarea",
+        "events": "onChange"
+      },
+      "testTitle": "Generation sends the requested brief, recovers from a provider error, and stays editable",
+      "assertionName": "Brief updates the generated model request",
+      "assertionMarker": "Generation brief"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "649",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "Generation sends the requested brief, recovers from a provider error, and stays editable",
+      "assertionName": "Generation request retries after a rejected local model call",
+      "assertionMarker": "Draft 3 ideas"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "661",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Search finds ideas by notes and clears back to the library",
+      "assertionMarker": "Search ideas, hooks, and notes"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "667",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Favorite and stage filters update the result set",
+      "assertionMarker": "Filter ideas"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "695",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Empty-state action opens the composer",
+      "assertionMarker": "Add your first idea"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "740",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "Delete confirmation can be escaped, canceled, or committed for only one idea",
+      "assertionName": "Dismiss notice clears the completed delete message",
+      "assertionMarker": "Dismiss notice"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "751",
+        "component": "App",
+        "tag": "ComposerDialog",
+        "events": "onChange,onSubmit"
+      },
+      "testTitle": "creates, edits, favorites, filters, exports, and reloads a local idea",
+      "assertionName": "Composed changes appear in the content queue and survive reload",
+      "assertionMarker": "Content queue"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "760",
+        "component": "App",
+        "tag": "Dialog",
+        "events": "onOpenChange"
+      },
+      "testTitle": "Delete confirmation can be escaped, canceled, or committed for only one idea",
+      "assertionName": "Delete dialog Escape changes only pending confirmation state",
+      "assertionMarker": "Delete this idea?"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "776",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "Delete confirmation can be escaped, canceled, or committed for only one idea",
+      "assertionName": "Keep idea closes confirmation without deleting the selected card",
+      "assertionMarker": "Keep idea"
+    },
+    {
+      "row": {
+        "package": "reelfarm",
+        "source_file": "apps-store/reelfarm/ui/src/App.tsx",
+        "line": "783",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "Delete confirmation can be escaped, canceled, or committed for only one idea",
+      "assertionName": "Delete idea removes only the confirmed card and persists the remaining library",
+      "assertionMarker": "Delete idea"
+    }
+  ]
+}
