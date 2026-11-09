@@ -1,0 +1,38 @@
+{
+  "name": "@ryu/reelfarm-app",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "The Ryu Studio Companion: a local-first short-form content queue.",
+  "scripts": {
+    "build": "vite build",
+    "check-types": "tsc --noEmit",
+    "dev": "vite",
+    "test": "bun test src && bun test e2e/interaction-map.test.mjs",
+    "test:e2e": "node ../../../apps/desktop/node_modules/@playwright/test/cli.js test --config=e2e/reelfarm-companion.playwright.config.ts"
+  },
+  "dependencies": {
+    "@ryu/app-host": "workspace:*",
+    "@ryu/blocks": "workspace:*",
+    "@ryu/i18n": "workspace:*",
+    "@ryu/ui": "workspace:*",
+    "@ryuhq/core-client": "workspace:*",
+    "@toolwind/corner-shape": "0.0.8-3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@ryu/config": "workspace:*",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^7.3.1",
+    "vite-plugin-singlefile": "^2.3.0"
+  },
+  "ryuCompanionInteractionMap": "e2e/companion-interactions.json"
+}
